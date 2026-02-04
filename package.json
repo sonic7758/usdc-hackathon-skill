@@ -1,7 +1,7 @@
 {
   "name": "usdc-hackathon-skill",
   "version": "1.0.0",
-  "description": "OpenClaw 스킬 - Moltbook USDC 해커톤을 위한 테스트넷 기반 USDC 거래 및 CCTP 기능",
+  "description": "OpenClaw skill - Testnet-based USDC transactions and CCTP functions for Moltbook USDC Hackathon",
   "main": "src/usdcWallet.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

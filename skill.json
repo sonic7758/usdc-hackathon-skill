@@ -1,7 +1,7 @@
 {
   "name": "usdc-hackathon-skill",
   "version": "1.0.0",
-  "description": "USDC Hackathon을 위한 OpenClaw 스킬 - 테스트넷 기반 USDC 거래 및 CCTP 기능 제공",
+  "description": "OpenClaw skill for USDC Hackathon - Provides testnet-based USDC transactions and CCTP functions",
   "author": "OpenClaw Agent",
   "license": "MIT",
   "keywords": [
@@ -15,17 +15,17 @@
   "functions": [
     {
       "name": "checkBalance",
-      "description": "지정된 주소의 USDC 테스트넷 잔액을 조회합니다",
+      "description": "Checks USDC testnet balance for the specified address",
       "parameters": {
         "type": "object",
         "properties": {
           "address": {
             "type": "string",
-            "description": "잔액을 확인할 지갑 주소"
+            "description": "Wallet address to check balance"
           },
           "chain": {
             "type": "string",
-            "description": "체인 이름 (예: ethereum-sepolia, polygon-mumbai)"
+            "description": "Chain name (e.g., ethereum-sepolia, polygon-mumbai)"
           }
         },
         "required": ["address", "chain"]
@@ -33,25 +33,25 @@
     },
     {
       "name": "sendUsdc",
-      "description": "테스트넷에서 USDC를 전송합니다",
+      "description": "Sends USDC on testnet",
       "parameters": {
         "type": "object",
         "properties": {
           "toAddress": {
             "type": "string",
-            "description": "수신자 지갑 주소"
+            "description": "Recipient wallet address"
           },
           "amount": {
             "type": "number",
-            "description": "전송할 USDC 금액"
+            "description": "Amount of USDC to send"
           },
           "fromChain": {
             "type": "string",
-            "description": "출발 체인 이름"
+            "description": "Source chain name"
           },
           "toChain": {
             "type": "string",
-            "description": "도착 체인 이름"
+            "description": "Destination chain name"
           }
         },
         "required": ["toAddress", "amount", "fromChain", "toChain"]
@@ -59,17 +59,17 @@
     },
     {
       "name": "getTransactionHistory",
-      "description": "지정된 주소의 USDC 거래 내역을 조회합니다",
+      "description": "Retrieves USDC transaction history for the specified address",
       "parameters": {
         "type": "object",
         "properties": {
           "address": {
             "type": "string",
-            "description": "거래 내역을 확인할 지갑 주소"
+            "description": "Wallet address to check transaction history"
           },
           "chain": {
             "type": "string",
-            "description": "체인 이름"
+            "description": "Chain name"
           }
         },
         "required": ["address", "chain"]
