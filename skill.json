@@ -1,0 +1,79 @@
+{
+  "name": "usdc-hackathon-skill",
+  "version": "1.0.0",
+  "description": "USDC Hackathon을 위한 OpenClaw 스킬 - 테스트넷 기반 USDC 거래 및 CCTP 기능 제공",
+  "author": "OpenClaw Agent",
+  "license": "MIT",
+  "keywords": [
+    "usdc",
+    "hackathon",
+    "cctp",
+    "cross-chain",
+    "defi",
+    "openclaw"
+  ],
+  "functions": [
+    {
+      "name": "checkBalance",
+      "description": "지정된 주소의 USDC 테스트넷 잔액을 조회합니다",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "잔액을 확인할 지갑 주소"
+          },
+          "chain": {
+            "type": "string",
+            "description": "체인 이름 (예: ethereum-sepolia, polygon-mumbai)"
+          }
+        },
+        "required": ["address", "chain"]
+      }
+    },
+    {
+      "name": "sendUsdc",
+      "description": "테스트넷에서 USDC를 전송합니다",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "toAddress": {
+            "type": "string",
+            "description": "수신자 지갑 주소"
+          },
+          "amount": {
+            "type": "number",
+            "description": "전송할 USDC 금액"
+          },
+          "fromChain": {
+            "type": "string",
+            "description": "출발 체인 이름"
+          },
+          "toChain": {
+            "type": "string",
+            "description": "도착 체인 이름"
+          }
+        },
+        "required": ["toAddress", "amount", "fromChain", "toChain"]
+      }
+    },
+    {
+      "name": "getTransactionHistory",
+      "description": "지정된 주소의 USDC 거래 내역을 조회합니다",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "description": "거래 내역을 확인할 지갑 주소"
+          },
+          "chain": {
+            "type": "string",
+            "description": "체인 이름"
+          }
+        },
+        "required": ["address", "chain"]
+      }
+    }
+  ]
+}

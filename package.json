@@ -1,0 +1,41 @@
+{
+  "name": "usdc-hackathon-skill",
+  "version": "1.0.0",
+  "description": "OpenClaw 스킬 - Moltbook USDC 해커톤을 위한 테스트넷 기반 USDC 거래 및 CCTP 기능",
+  "main": "src/usdcWallet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "openclaw",
+    "usdc",
+    "hackathon",
+    "cctp",
+    "cross-chain",
+    "defi",
+    "crypto",
+    "wallet"
+  ],
+  "author": "OpenClaw Agent",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonic7758/usdc-hackathon-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sonic7758/usdc-hackathon-skill/issues"
+  },
+  "homepage": "https://github.com/sonic7758/usdc-hackathon-skill#readme"
+}
